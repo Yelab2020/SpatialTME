@@ -1,9 +1,0 @@
-flask
-flask-restful
-pymongo
-Flask-PyMongo
-celery
-scipy
-redis
-pandas
-rpy2
