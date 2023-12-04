@@ -1,0 +1,106 @@
+
+   <!-- ======= Breadcrumbs ======= -->
+   <div class="breadcrumbs">
+    <div class="page-header d-flex align-items-center">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>Analysis</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="container">
+        <ol>
+          <li><a href="#!/">Home</a></li>
+          <li><a href="#!/search">Search</a></li>
+          <li><a>Analysis</a></li>
+        </ol>
+      </div>
+    </nav>
+  </div><!-- End Breadcrumbs -->
+
+  <!-- ======= Sample Info ======= -->
+  <section class="sample-info">
+    <div class="container">
+      <h3>Data detail</h3>
+      <div class="sample-info-square">
+        <div class="row gy-4">
+          <div class="sample-info-table-container col-lg-6">
+            <table class="sample-info-table">
+                <tr>
+                  <th>Sample ID</th>
+                  <td>{$ sample[0].sample_id $}</td>
+                </tr>
+                <tr>
+                  <th>Dataset name</th>
+                  <td>{$ sample[0].dataset_name $}</td>
+                </tr>
+                <tr>
+                  <th>Cancer type</th>
+                  <td>{$ sample[0].cancer_type $}</td>
+                </tr>
+                <tr>
+                  <th>Organ</th>
+                  <td>{$ sample[0].organ $}</td>
+                </tr>
+                <tr>
+                  <th>Organ detail</th>
+                  <td>{$ sample[0].organ_detail $}</td>
+                </tr>
+                <tr>
+                  <th>Sample status</th>
+                  <td>{$ sample[0].sample_status $}</td>
+                </tr>
+                <tr>
+                  <th>Platform</th>
+                  <td>{$ sample[0].platform $}</td>
+                </tr>
+                <tr>
+                  <th>Mal-Bdy-nMal axis</th>
+                  <td>{$ sample[0].boundary_define $}</td>
+                </tr>
+                <tr>
+                  <th>Date published</th>
+                  <td>{$ sample[0].published_date $}</td>
+                </tr>
+                <tr>
+                  <th>Accessible ID</th>
+                  <td>{$ sample[0].accessible_ID $}</td>
+                </tr>
+                <tr>
+                  <th>DOI</th>
+                  <td>
+                    <a ng-href="{$ sample[0].doi $}" target="_blank">{$ sample[0].doi $}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Clinical information</th>
+                  <td>{$ sample[0].orginal_description $}</td>
+                </tr>
+            </table>  
+          </div>
+          <div class="sample-info-image-container col-lg-6" style="text-align: center;">
+            <img ng-src="{$ getSampleImageURL(sample[0]) $}" alt="" width="80%" style="margin: 0 auto;">
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </section>
+  <!-- ======= End Sample Info ======= -->
+
+  <!-- ======= Analysis Result ======= -->
+  <section class="analysis-result">
+    <div class="container">
+      <h3>Analysis</h3>
+      <p>It takes some time (about 10s) to load the analysis page the first time.</p>
+      <div class="analysis-square">
+          <iframe ng-src="{$ analysis_URL|trustAsResourceUrl $}" frameborder="0" id="mainiframe" width='100%' height='700px' scrolling="auto"></iframe>
+      </div>
+    </div>
+  </section>
+  <!-- ======= End Analysis Result ======= -->
+

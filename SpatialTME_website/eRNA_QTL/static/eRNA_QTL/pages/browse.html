@@ -1,0 +1,48 @@
+
+   <!-- ======= Breadcrumbs ======= -->
+   <div class="breadcrumbs">
+    <div class="page-header d-flex align-items-center">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>Browse</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="container">
+        <ol>
+          <li><a href="#!/">Home</a></li>
+          <li>Browse</li>
+        </ol>
+      </div>
+    </nav>
+  </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Services Section 改Cancer types ======= -->
+    <section id="service" class="services pt-0">
+        <div class="container" data-aos="fade-up">
+          <div class="section-header">
+            <span>Cancer types</span>
+            <h2>Cancer types</h2>
+          </div>
+
+          <div class="row gy-4" >
+            <div class="col-lg-3 col-md-3" data-aos="fade-up" data-aos-delay="100" ng-repeat="x in records">
+              <div class="row py-2 px-2 tissue-row tissuetype">
+                <div class="col-5 px-0 py-0 tissueImg">
+                  <img src="{$x.pic_src$}" alt="" width="100px" height="100px" style="margin: 5px;">
+                </div>
+                <div class="col-7 px-0 py-0">
+                  <h3>{$x.organ$}</h3>
+                  <p ng-repeat="y in x.cancerlist_num">
+                    <a ng-href="#!/browse/{$x.cancerlist[$index]$}">{$y$}</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+       </section><!-- End Services Section -->

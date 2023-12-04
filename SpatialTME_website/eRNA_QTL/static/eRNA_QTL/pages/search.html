@@ -1,0 +1,111 @@
+
+   <!-- ======= Breadcrumbs ======= -->
+   <div class="breadcrumbs">
+    <div class="page-header d-flex align-items-center">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>Search</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="container">
+        <ol>
+          <li><a href="#!/">Home</a></li>
+          <li>Search</li>
+        </ol>
+      </div>
+    </nav>
+  </div><!-- End Breadcrumbs -->
+
+   <!-- ======= Search header ======= -->
+  <div class="container search-container">
+      <table>
+        <tr>
+          <td>
+              <label for="platformFilter">Platform:</label>
+              <select ng-model="platformFilter">
+                  <option value="">All</option>
+                  <option ng-repeat="x in Init_Sample_list | unique: 'platform'" value="{$x.platform$}">{$x.platform$}</option>
+              </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <label for="cancerFilter">Cancer type:</label>
+              <select ng-model="cancerFilter">
+                  <option value="">All</option>
+                  <option ng-repeat="x in Init_Sample_list | filter:{platform: platformFilter} | unique: 'cancer_type'" value="{$x.cancer_type$}">{$x.cancer_type$}</option>
+              </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+              <label for="projectFilter">Dataset:</label>
+              <select ng-model="projectFilter" ng-options="sample.accessible_ID as sample.accessible_ID for sample in Init_Sample_list | filter:{platform: platformFilter, cancer_type: cancerFilter} | unique: 'accessible_ID'">
+                  <option value="">All</option>
+              </select>  
+          </td>
+        </tr>
+      </table>
+      
+      <div class="col-lg-offset-3 col-md-offset-4 form-group search-button">
+        <button class="btn btn-secondary" id="clear" type="clear" ng-click="clear()">
+          <strong>Clear</strong>
+        </button>
+        <button class="btn btn-primary" id="submit" type="submit" ng-click="search()">
+          <strong>Search</strong>
+        </button>
+      </div>
+  </div>
+
+   <!-- ======= Search Result ======= -->
+  <section class="search-result">
+   <div class="container">
+      <div ng-show="loading" class="text-center">
+        <img src="/static/eRNA_QTL/image/loading.gif" alt="Transcription Factors" style="height: 150px;width: 150px">
+      </div>
+    </div>
+    <div class="container">
+      <div class="row" ng-show="table_show">
+          <h3>Search results</h3>
+          <table id = 'tablesort' class="table table-hover table-bordered" style="width:100%; white-space: nowrap; " >
+            <thead>
+              <tr>
+                <th> </th>
+                <th>Sample ID</th>
+                <th>Dataset name</th>
+                <th>Cancer type</th>
+                <th>Organ</th>
+                <th>Sample status</th>
+                <th>Platform</th>
+                <th>Mal-Bdy-nMal axis</th>
+                <th>Published date</th>
+                <th>Accessible ID</th>
+                <th>DOI</th>
+            </thead>
+            <tbody>
+              <tr ng-repeat="sample in Sample_list">
+                <td>
+                    <button type="button" class="btn btn-primary btn-xs" ng-click="openInNewWindow(sample)">
+                      Analysis
+                    </button>
+                </td>
+                <td>{$ sample.sample_id $}</td>
+                <td>{$ sample.dataset_name $}</td>
+                <td>{$ sample.cancer_type $}</td>
+                <td>{$ sample.organ $}</td>
+                <td>{$ sample.sample_status $}</td>
+                <td>{$ sample.platform $}</td>
+                <td>{$ sample.boundary_define $}</td>
+                <td>{$ sample.published_date $}</td>
+                <td>{$ sample.accessible_ID $}</td>
+                <td>{$ sample.doi $}</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div> 
+  </section><!-- ======= End Search Result ======= -->

@@ -1,0 +1,141 @@
+
+   <!-- ======= Breadcrumbs ======= -->
+   <div class="breadcrumbs">
+    <div class="page-header d-flex align-items-center">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>Tutorial</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="container">
+        <ol>
+          <li><a href="#!/">Home</a></li>
+          <li>Tutorial</li>
+        </ol>
+      </div>
+    </nav>
+  </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Tutorial Section  ======= -->
+    <div id="about" class="about">
+      <div class="container" data-aos="fade-up">
+          <div class="content order-last  order-lg-first">
+            <h3>How to find your interesting samples?</h3>
+            <p>
+              There are two ways to view datasets in SpatialTME. You can view browse samples of various cancer types in <strong><i>Browse</i></strong> section, or you can search for samples that meet your filtering criteria in the <strong><i>Search</i></strong> section.
+            </p>
+            <div class="row gy-4">
+              <div class="container about-module col-lg-6" >
+                <h5>1. Data browse</h5>
+                <img src="/static/eRNA_QTL/image/Help-Browse.png" alt="" style="width: 100%;">
+              </div>
+              <div class="container about-module col-lg-6" >
+                <h5>2. Data search</h5>
+                <img src="/static/eRNA_QTL/image/Help-Search.png" alt="" style="width: 100%;">
+              </div>
+            </div>
+          </div>
+
+          <div class="content order-last  order-lg-first">
+            <h3>How to enter analysis page?</h3>
+            <p>
+              You can perform analysis on your selected interested samples from the above step, or you can choose your interested analysis module and then quickly select a sample for analysis.
+            </p>
+            <div class="row gy-4">
+              <div class="container about-module col-lg-6" >
+                <h5>1. Analyze your interested sample</h5>
+                <img src="/static/eRNA_QTL/image/Help-Analysis.png" alt="" style="width: 100%;">
+              </div>
+              <div class="container about-module col-lg-6" >
+                <h5>2. Analyze your interested module</h5>
+                <img src="/static/eRNA_QTL/image/Help-Module.png" alt="" style="width: 100%;">
+              </div>
+            </div>
+          </div>
+
+          <div class="content order-last  order-lg-first">
+            <h3>How to perform analysis in each module?</h3>
+            <p>
+              There are six analysis modules in Spatial TME, including <strong>Spatial Structure</strong>, <strong>Spatial Gene Expression</strong>, <strong>Spatial DE Analysis</strong>, <strong>Spatial Cell Pattern</strong>, <strong>Sub-spot GEP</strong>,<strong>Cell Interaction</strong>.
+            </p>
+            <div class="row gy-4">
+              <div class="container about-module col-lg-6" >
+                <h5>1. Spatial Structure</h5>
+                <p>In SpatialTME, there are two types of delineating spatial structure: morphological adjusted clusters and the malignant-boundary-non-malignant axis. All samples have the former type, while some samples with clear boundaries have both types available for selection.</p>
+                <img src="/static/eRNA_QTL/image/Help-SpatialStructure.png" alt="" style="width: 100%;">
+              </div>
+              <div class="container about-module col-lg-6" >
+                <h5>2. Spatial Gene Expression</h5>
+                <p>Type the gene or gene set of your interest, or select from our provided hallmark gene sets, to explore the spatial expression patterns of individual genes or gene set scores.</p>
+                <img src="/static/eRNA_QTL/image/Help-Gene.png" alt="" style="width: 100%;">
+              </div>
+            </div>
+            <div class="row gy-4">
+              <div class="container about-module col-lg-12" >
+                <h5>3. Spatial DE Analysis</h5>
+                <p>In the <strong>Spatial DE Analysis</strong> module, there are two sub-modules available: DEG and Functions. Based on the two aforementioned types of spatial structure delineating, users can explore the differentially expressed genes (DEG) and the enriched functional pathways in their regions of interest.</p>
+              </div>
+              <div class="container about-submodule col-lg-6" >
+                <h6>(1) Differential expression gene analysis</h6>
+                <img src="/static/eRNA_QTL/image/Help-SpatialDE.png" alt="" style="width: 100%;">
+              </div>
+              <div class="container about-submodule col-lg-6" >
+                <h6>(2) Functions analysis</h6>
+                <img src="/static/eRNA_QTL/image/Help-SpatialDEfunction.png" alt="" style="width: 100%;">
+              </div>
+            </div>
+            <div class="row gy-4">
+              <div class="container about-module col-lg-12" >
+                <h5>4. Spatial Cell Pattern</h5>
+                <p>In the <strong>Spatial Cell Pattern</strong> module, there are two sub-modules available: Spot composition and Cell location.</p>
+              </div>
+              <div class="container about-submodule col-lg-6" >
+                <h6>(1) Spot composition</h6>
+                <p>In this sub-module, you can view two charts: the left chart displays the cellular composition of spatial spots in the region of interest or the whole sample, presented as pie charts for each spatial spots; the right one compares the cellular compositions across all regions, presented as bar charts.</p>
+                <img src="/static/eRNA_QTL/image/Help-DeconSpot.png" alt="" style="width: 100%;">
+              </div>
+              <div class="container about-submodule col-lg-6" >
+                <h6>(2) Cell location</h6>
+                <p>You can explore the distribution of your interested cell types in a specific region or the whole sample. The left plot is a spatial feature plot that visualizes the proportion of the cell type in spatial spots using color and transparency. The right plot compares the proportions of the cell type in different regions.</p>
+                <img src="/static/eRNA_QTL/image/Help-DeconCellLocation.png" alt="" style="width: 100%;">
+              </div>
+            </div>
+
+            <div class="row gy-4">
+              <div class="container about-module col-lg-12" >
+                <h5>5. Sub-spot GEP</h5>
+                <p>This module is used for visualizing cell-specific gene expression profiles at sub-spot level. There are two sub-modules available: UMAP Plot and Gene Expression Plot.</p>
+              </div>
+              <div class="container about-submodule col-lg-6" >
+                <h6>(1) UMAP Plot</h6>
+                  <p>In this sub-module, you can select a specific category (such as cell type, location, or combined cell type and location) to group the data by, and visualize the distribution of sub-spots.</p>
+                  <img src="/static/eRNA_QTL/image/Help-ReconUMAP.png" alt="" style="width: 100%;">
+              </div>
+              <div class="container about-submodule col-lg-6" >
+                <h6>(2) Gene Expression Plot</h6>
+                  <p>Type the gene or gene set of your interest to explore the expression patterns of individual genes or gene set scores at sub-spot level.</p>
+                  <img src="/static/eRNA_QTL/image/Help-ReconGene.png" alt="" style="width: 100%;">
+              </div>
+            </div>
+
+              <div class="container about-module col-lg-12" >
+                <h5>6. Cell Interaction</h5>
+                <p>In this module, you can explore the interaction weights among all cell types or choose your interested cell type as the source or target at the sub-spot level. The left plot displays the overall interaction weights between cells, while the right plot shows the interaction strengths of each ligand-receptor pair within your selected signaling pathway.</p>  
+                <img src="/static/eRNA_QTL/image/Help-CellChat.png" alt="" style="width: 50%;">
+              </div>
+          </div>
+
+          <div class="content order-last  order-lg-first">
+            <h3>How to analyze your own data?</h3>
+            <p>
+              In the <strong><i>Analyze</i></strong> section, you can upload your data (including your ST data and scRNA-seq data for reference) in the SpatialTME. Then the analaysis results will send to your email after a period of time (about 1~4h depneds on your data size).
+            </p>
+            <img src="/static/eRNA_QTL/image/Help-Analyze.png" alt="" style="width: 50%;">
+
+          </div>
+        </div>
+     </div>
