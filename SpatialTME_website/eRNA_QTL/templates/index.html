@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" ng-app="eRNA_QTL" style="background-image: linear-gradient(to bottom right,#FFFFFF, #FFFFFF)">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>SpatialTME</title>
+    <link rel="icon" href="/static/eRNA_QTL/image/SlideSmall.png">
+    <!-- Google Fonts from Logis-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+
+    <!--CSS from Logis-->
+    <link href="/static/eRNA_QTL/lib/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/eRNA_QTL/css/mainLogis.css" rel="stylesheet">
+
+    <!--angular and juquery基本文件-->
+    <script src="/static/eRNA_QTL/lib/jquery/jquery-3.1.1.js"></script>
+    <script src="/static/eRNA_QTL/lib/jquery/jquery-ui.css"></script>
+    <script src="/static/eRNA_QTL/lib/angular/angular.js"></script>
+    <script src="/static/eRNA_QTL/lib/angular/angular-route.js"></script>
+    <script src="/static/eRNA_QTL/lib/bootstrap/bootstrap.js"></script>
+    <script src="/static/eRNA_QTL/lib/ui-bootstrap/ui-bootstrap-tpls-2.4.0.js"></script>
+    <script src="/static/eRNA_QTL/lib/bootstrap-slider/angular-bootstrap-slider.js"></script>
+    <!--bootstrap-select插件-->
+    <script src="/static/eRNA_QTL/lib/bootstrap-select-1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="/static/eRNA_QTL/lib/bootstrap-select-1.13.14/dist/css/bootstrap-select.min.css">
+    <!--tablesort插件-->
+    <script src='/static/eRNA_QTL/lib/dataTables/jquery.dataTables.min.js'></script>
+    <script src='/static/eRNA_QTL/lib/dataTables//dataTables.bootstrap.min.js'></script>
+    <!--button-->
+    <script src='/static/eRNA_QTL/lib/dataTables/dataTables.buttons.min.js'></script>
+    <link rel="stylesheet" href="/static/eRNA_QTL/lib/dataTables//dataTables.bootstrap.min.css">
+    <!--应用的js文件-->
+    <script src="/static/eRNA_QTL/js/app.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+</head>
+
+<body>
+
+<div ng-include="'/static/eRNA_QTL/partials/navigation.html'" ng-controller="HomeController"></div>
+
+<div ng-view></div>
+
+<div ng-include="'/static/eRNA_QTL/partials/footer.html'"></div>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<div id="preloader"></div>
+<!-- Template Main JS File -->
+<script src="/static/eRNA_QTL/js/mainLogis.js"></script>
+</body>
+</html>
+
+
